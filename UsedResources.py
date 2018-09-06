@@ -6,7 +6,7 @@ from hurry.filesize import size
 
 DriveLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 Drives = ['%s:' % d for d in DriveLetters if os.path.exists('%s:' % d)]
-DelayInSec = 60
+DelayInSec = 1
 Clear = lambda:os.system("cls")
 
 def GetDriveUsage():
@@ -28,4 +28,4 @@ while True:
     print(str(VMemUsage[2]) + "%")
     print("Used " + size(VMemUsage[3]) + " | " + size(VMemUsage[4]) + " free" + " | " + size(VMemUsage[0]) + " total")
 
-    time.sleep(1)
+    time.sleep(DelayInSec)
