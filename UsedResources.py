@@ -7,6 +7,7 @@ from hurry.filesize import size
 DriveLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 Drives = ['%s:' % d for d in DriveLetters if os.path.exists('%s:' % d)]
 DelayInSec = 60
+Clear = lambda:os.system("cls")
 
 def GetDriveUsage():
     for d in Drives:
@@ -15,7 +16,7 @@ def GetDriveUsage():
         print("Used " + size(Usage[1]) + " | " + size(Usage[2]) + " free")
 
 while True:
-    lambda:os.system("cls")
+    Clear()
     print("DRIVES" + "\n")
     GetDriveUsage()
 
